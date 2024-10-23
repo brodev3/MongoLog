@@ -13,11 +13,19 @@
 
 MongoLog is a software solution for centralized storage of project, wallet, and log data from various sources. It is based on MongoDB using the Mongoose ORM and is divided into two main components: the server bot and the logging client.
 
+<p align="center">
+      <img src="https://i.ibb.co/s38jxXf/1.gif">
+</p>
+
 ## Features
 
 - Centralized storage of project, wallet, and log data.
 - Report generation in Excel format with easy filtering by date and project.
 - A simple and convenient Telegram bot interface for interacting with the system.
+
+<p align="center">
+      <img src="https://i.ibb.co/nz6R1MS/2.png">
+</p>
 
 ## Server
 
@@ -62,11 +70,19 @@ Stores information about projects:
 
 ## Telegram Bot
 
+
+
+
+
 The server bot interacts with users via Telegram, providing an interface for requesting data and generating reports.
 
 - **Telegram Bot**: A simple interface for interacting with the user, allowing reports on stored data.
 - **Data Filtering**: Supports filtering data by date and project, making it easier to find specific information.
 - **Excel Report Generation**: Automatically generates reports in Excel format, saved in the program folder for further use.
+
+<p align="center">
+      <img src="https://i.ibb.co/8sBwfYV/1.png" >
+</p>
 
 ## Logging Client
 
