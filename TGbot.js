@@ -173,10 +173,10 @@ Created by: **@brodevv3**
 
     async onMessage(msg) {
         const chatId = msg.chat.id;
-        if (!this.allowedUsers.includes(chatId))
+        if (!this.allowedUsers.includes(chatId) || !msg.text)
             return;
 
-        const text = msg.text.trim();
+        const text = msg.text?.trim();
 
         if (this.userFilters[chatId]?.waitingFor === 'wallets') {
             const wallets = text.split('\n').map(wallet => wallet.trim()).filter(wallet => wallet !== '');
