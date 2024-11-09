@@ -7,7 +7,7 @@ async function sendTelegramAlert(error) {
         if (!config.TGbot || !config.TGbot.token) return;
         const bot = new TelegramBot(config.TGbot.token, { polling: false });
         const allowedUsers = config.TGbot.allowedUsers;
-        let message = "⛔️ Project: " + config.mongoDB.project_name + ". ‼️ FATAL ERROR: " + error.message;
+        let message = "⛔️ Project: " + config.mongoDB.project_name + " \n ‼️ FATAL ERROR: " + error.message;
         for (let chatId of allowedUsers) await bot.sendMessage(chatId, message, { parse_mode: 'Markdown' })
     } catch (error) {
         log.errorDB({}, "sendTelegramAlert", 'Error sending alert in Telegram: ' + error.message, error.stack);
